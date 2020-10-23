@@ -1,0 +1,467 @@
+{
+	"id": "e283a7d5-34cf-4cdf-b1d5-0b129316f0ff",
+	"name": "Users",
+	"timestamp": "2020-10-23T07:17:07.258Z",
+	"collection_id": "217ce273-1979-4e0a-925f-d2c8f3ed1b44",
+	"folder_id": 0,
+	"environment_id": "21e755d7-8897-4ecd-bfc9-a6d93831c39f",
+	"totalPass": 13,
+	"totalFail": 4,
+	"results": [
+		{
+			"id": "2c72225f-27e3-4b2c-913c-2ccdea966ebd",
+			"name": "Registration ",
+			"url": "http://161.35.202.130:3100/users",
+			"time": 133,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code is 400": true,
+				"check that response is already taken": true,
+				"Response time is less than 250ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"check that response is already taken": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 250ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				133
+			],
+			"allTests": [
+				{
+					"Status code is 400": true,
+					"check that response is already taken": true,
+					"Response time is less than 250ms": true
+				}
+			]
+		},
+		{
+			"id": "0326b3b2-0a17-4bca-8218-5373da376e95",
+			"name": "User login ",
+			"url": "http://161.35.202.130:3100/users/login",
+			"time": 344,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 201": true,
+				"set token dinamically": true
+			},
+			"testPassFailCounts": {
+				"Status code is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"set token dinamically": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				344
+			],
+			"allTests": [
+				{
+					"Status code is 201": true,
+					"set token dinamically": true
+				}
+			]
+		},
+		{
+			"id": "ebf6c082-18be-4ca9-a72c-4e3b1580ad5b",
+			"name": "Logout",
+			"url": "http://161.35.202.130:3100/users/logout",
+			"time": 68,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				68
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "49d371dc-c92a-4449-abf7-25bad00a1a3d",
+			"name": "Update user data",
+			"url": "http://161.35.202.130:3100/users",
+			"time": 109,
+			"responseCode": {
+				"code": 409,
+				"name": "Conflict"
+			},
+			"tests": {
+				"Status code is 200": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				109
+			],
+			"allTests": [
+				{
+					"Status code is 200": false
+				}
+			]
+		},
+		{
+			"id": "e232f687-b3c1-4d97-b51f-46eaaea22a23",
+			"name": "get user by username ",
+			"url": "http://161.35.202.130:3100/users?q=rosie",
+			"time": 91,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				91
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "e39bfdbf-c58c-47e2-b13f-0a6803899fc2",
+			"name": "Get user by id",
+			"url": "http://161.35.202.130:3100/users/381",
+			"time": 112,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				112
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "97596ba3-ceca-4478-aa65-43d02fefbe51",
+			"name": "Delete user by id",
+			"url": "http://161.35.202.130:3100/users/334",
+			"time": 81,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				81
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "57f8f801-2a76-4697-aa7a-c21618f4d3be",
+			"name": "Follow user",
+			"url": "http://161.35.202.130:3100/users/7",
+			"time": 99,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code is 200": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				99
+			],
+			"allTests": [
+				{
+					"Status code is 200": false
+				}
+			]
+		},
+		{
+			"id": "a8a79526-02cb-4555-ab3b-e7f205a73bce",
+			"name": "Ban user",
+			"url": "http://161.35.202.130:3100/users/5/banstatus",
+			"time": 107,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				107
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "a3912ca7-f1a6-4dc8-b909-7ced2f23392d",
+			"name": "Get user's post",
+			"url": "http://161.35.202.130:3100/users/381/posts?postStatus=public&take=1&skip=0&UserId=381",
+			"time": 99,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				99
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "8bc32bbd-a668-4d24-844e-589fff8b0c88",
+			"name": "user login invalid credentials",
+			"url": "http://161.35.202.130:3100/users/login",
+			"time": 71,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code is 400": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				71
+			],
+			"allTests": [
+				{
+					"Status code is 400": true
+				}
+			]
+		},
+		{
+			"id": "8f7a41b3-4336-4f7b-bf76-7b41e29420b1",
+			"name": "Registration with existing account",
+			"url": "http://161.35.202.130:3100/users",
+			"time": 66,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code is 400": true,
+				"Check if message is Username taken": true
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check if message is Username taken": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				66
+			],
+			"allTests": [
+				{
+					"Status code is 400": true,
+					"Check if message is Username taken": true
+				}
+			]
+		},
+		{
+			"id": "32339c4a-4ab6-4ddf-a366-0d010cfdc52a",
+			"name": "Registration with invalid password",
+			"url": "http://161.35.202.130:3100/users",
+			"time": 436,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 400": false
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				436
+			],
+			"allTests": [
+				{
+					"Status code is 400": false
+				}
+			]
+		},
+		{
+			"id": "5b1b3ae3-b4db-4147-973f-572abc2b1226",
+			"name": "Registration with invalid email",
+			"url": "http://161.35.202.130:3100/users",
+			"time": 581,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 400": false
+			},
+			"testPassFailCounts": {
+				"Status code is 400": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				581
+			],
+			"allTests": [
+				{
+					"Status code is 400": false
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 2397,
+	"collection": {
+		"requests": [
+			{
+				"id": "2c72225f-27e3-4b2c-913c-2ccdea966ebd",
+				"method": "POST"
+			},
+			{
+				"id": "0326b3b2-0a17-4bca-8218-5373da376e95",
+				"method": "POST"
+			},
+			{
+				"id": "ebf6c082-18be-4ca9-a72c-4e3b1580ad5b",
+				"method": "DELETE"
+			},
+			{
+				"id": "49d371dc-c92a-4449-abf7-25bad00a1a3d",
+				"method": "PUT"
+			},
+			{
+				"id": "e232f687-b3c1-4d97-b51f-46eaaea22a23",
+				"method": "GET"
+			},
+			{
+				"id": "e39bfdbf-c58c-47e2-b13f-0a6803899fc2",
+				"method": "GET"
+			},
+			{
+				"id": "97596ba3-ceca-4478-aa65-43d02fefbe51",
+				"method": "DELETE"
+			},
+			{
+				"id": "57f8f801-2a76-4697-aa7a-c21618f4d3be",
+				"method": "PATCH"
+			},
+			{
+				"id": "a8a79526-02cb-4555-ab3b-e7f205a73bce",
+				"method": "PUT"
+			},
+			{
+				"id": "a3912ca7-f1a6-4dc8-b909-7ced2f23392d",
+				"method": "GET"
+			},
+			{
+				"id": "8bc32bbd-a668-4d24-844e-589fff8b0c88",
+				"method": "POST"
+			},
+			{
+				"id": "8f7a41b3-4336-4f7b-bf76-7b41e29420b1",
+				"method": "POST"
+			},
+			{
+				"id": "32339c4a-4ab6-4ddf-a366-0d010cfdc52a",
+				"method": "POST"
+			},
+			{
+				"id": "5b1b3ae3-b4db-4147-973f-572abc2b1226",
+				"method": "POST"
+			}
+		]
+	}
+}
