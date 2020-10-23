@@ -1,0 +1,111 @@
+{
+	"id": "de9de4ab-bcad-43ed-a943-35fdff79bef2",
+	"name": "Comments",
+	"timestamp": "2020-10-23T10:19:49.422Z",
+	"collection_id": "ca498086-2590-4d67-afb2-1e8b3cb6fea2",
+	"folder_id": 0,
+	"environment_id": "21e755d7-8897-4ecd-bfc9-a6d93831c39f",
+	"totalPass": 2,
+	"totalFail": 1,
+	"results": [
+		{
+			"id": "1fe33dec-84e6-45a5-9200-22f545eee957",
+			"name": "Post comment",
+			"url": "http://161.35.202.130:3100/posts/3055/comment",
+			"time": 201,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 201": true
+			},
+			"testPassFailCounts": {
+				"Status code is 201": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				201
+			],
+			"allTests": [
+				{
+					"Status code is 201": true
+				}
+			]
+		},
+		{
+			"id": "42098811-6c41-4189-951f-e1d5588921e6",
+			"name": "Delete comment",
+			"url": "http://161.35.202.130:3100/posts/3054/comment/468",
+			"time": 66,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Status code is 200": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				66
+			],
+			"allTests": [
+				{
+					"Status code is 200": false
+				}
+			]
+		},
+		{
+			"id": "bbb31c0c-b471-4060-bb3b-4ac8644f4723",
+			"name": "Get comment by post id",
+			"url": "http://161.35.202.130:3100/posts/3054/comments",
+			"time": 76,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				76
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 343,
+	"collection": {
+		"requests": [
+			{
+				"id": "1fe33dec-84e6-45a5-9200-22f545eee957",
+				"method": "POST"
+			},
+			{
+				"id": "42098811-6c41-4189-951f-e1d5588921e6",
+				"method": "DELETE"
+			},
+			{
+				"id": "bbb31c0c-b471-4060-bb3b-4ac8644f4723",
+				"method": "GET"
+			}
+		]
+	}
+}
