@@ -1,0 +1,325 @@
+{
+	"id": "e163ff2b-4fa3-4800-9184-dc5590db2c01",
+	"name": "Posts",
+	"timestamp": "2020-10-23T09:45:13.795Z",
+	"collection_id": "3e31e1fb-25fd-4f60-900e-0fff93899215",
+	"folder_id": 0,
+	"environment_id": "21e755d7-8897-4ecd-bfc9-a6d93831c39f",
+	"totalPass": 9,
+	"totalFail": 1,
+	"results": [
+		{
+			"id": "792d42a0-6242-447f-b349-d625d383f450",
+			"name": "New post",
+			"url": "http://161.35.202.130:3100/posts",
+			"time": 122,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Status code is 200": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				122
+			],
+			"allTests": [
+				{
+					"Status code is 200": false
+				}
+			]
+		},
+		{
+			"id": "68b9b155-7cf2-4a9c-b6b8-867c2fcf0831",
+			"name": "User login",
+			"url": "http://161.35.202.130:3100/users/login",
+			"time": 465,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"set token dinamically": true
+			},
+			"testPassFailCounts": {
+				"set token dinamically": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				465
+			],
+			"allTests": [
+				{
+					"set token dinamically": true
+				}
+			]
+		},
+		{
+			"id": "90012735-cf70-403a-a5fb-5941dc9a24a8",
+			"name": "Feed public posts",
+			"url": "http://161.35.202.130:3100/posts/feed?type=public&take=1&skip=0",
+			"time": 114,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				114
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "caa760c4-122c-4f61-9dbb-41d7a851d563",
+			"name": "Get posts",
+			"url": "http://161.35.202.130:3100/posts?take=5&skip=0",
+			"time": 76,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				76
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "464a8954-854b-434b-aa06-29d24f2bddac",
+			"name": "Get public posts",
+			"url": "http://161.35.202.130:3100/posts/public?take=2&skip=2",
+			"time": 69,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				69
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "6e0f7166-4a2c-4879-9e67-21a2b6a0dc16",
+			"name": "Feed private posts without login",
+			"url": "http://161.35.202.130:3100/posts/feed?type=private&take=5&skip=0",
+			"time": 55,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"Status code is 401": true,
+				"Check if tests is unauthorized": true
+			},
+			"testPassFailCounts": {
+				"Status code is 401": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Check if tests is unauthorized": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				55
+			],
+			"allTests": [
+				{
+					"Status code is 401": true,
+					"Check if tests is unauthorized": true
+				}
+			]
+		},
+		{
+			"id": "e3ce7de0-4daa-415f-af1e-b664fbb7af64",
+			"name": "Get post by id",
+			"url": "http://161.35.202.130:3100/posts/200",
+			"time": 84,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				84
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "d40be150-b311-4bf6-a835-934fcd175469",
+			"name": "Change post",
+			"url": "http://161.35.202.130:3100/posts/3054",
+			"time": 88,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				88
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "73add932-1d50-44df-9a00-4ea45d7c89d4",
+			"name": "Delete post",
+			"url": "http://161.35.202.130:3100/posts/3055",
+			"time": 87,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				87
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "403b0012-13e3-4b33-8285-ddc26d249861",
+			"name": "Like post",
+			"url": "http://161.35.202.130:3100/posts/200",
+			"time": 130,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				130
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 1290,
+	"collection": {
+		"requests": [
+			{
+				"id": "792d42a0-6242-447f-b349-d625d383f450",
+				"method": "POST"
+			},
+			{
+				"id": "68b9b155-7cf2-4a9c-b6b8-867c2fcf0831",
+				"method": "POST"
+			},
+			{
+				"id": "90012735-cf70-403a-a5fb-5941dc9a24a8",
+				"method": "GET"
+			},
+			{
+				"id": "caa760c4-122c-4f61-9dbb-41d7a851d563",
+				"method": "GET"
+			},
+			{
+				"id": "464a8954-854b-434b-aa06-29d24f2bddac",
+				"method": "GET"
+			},
+			{
+				"id": "6e0f7166-4a2c-4879-9e67-21a2b6a0dc16",
+				"method": "GET"
+			},
+			{
+				"id": "e3ce7de0-4daa-415f-af1e-b664fbb7af64",
+				"method": "GET"
+			},
+			{
+				"id": "d40be150-b311-4bf6-a835-934fcd175469",
+				"method": "PUT"
+			},
+			{
+				"id": "73add932-1d50-44df-9a00-4ea45d7c89d4",
+				"method": "DELETE"
+			},
+			{
+				"id": "403b0012-13e3-4b33-8285-ddc26d249861",
+				"method": "PATCH"
+			}
+		]
+	}
+}
